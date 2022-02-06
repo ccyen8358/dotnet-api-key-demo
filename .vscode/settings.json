@@ -1,0 +1,14 @@
+{
+    "rest-client.decodeEscapedUnicodeCharacters": true,
+    "rest-client.environmentVariables": {
+        "$shared": {
+            "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwMDAwIiwibmFtZSI6IkFkbWluIiwiZGVwdF9pZCI6IkcxMDAwIiwiZGVwdF9uYW1lIjoiQ0VPIiwicm9sZSI6WyJhZG1pbiIsInVzZXIiXSwibmJmIjoxNjQzODYwNzYyLCJleHAiOjE2NDM5NDcxNjIsImlzcyI6InByb3ZpZGVfeW91cnMiLCJhdWQiOiJwcm92aWRlX3lvdXJzIn0.Nnf9xtOp8A0SvsaFnyqfzqNZyeT6EPlwxczjaftQ68Y"
+        },
+        "local": {
+            "access_token": "{{$shared access_token}}"
+        },
+        "production": {
+            "access_token": "{{$shared access_token}}"
+        }
+    }
+}

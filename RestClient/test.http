@@ -1,0 +1,31 @@
+@manager=06795D9D-A770-44B9-9B27-03C6ABDB1BAE
+@thirdparty=FA872702-6396-45DC-89F0-FC1BE900591B
+@employee=C5BFF7F0-B4DF-475E-A331-F737424F013C
+
+###
+
+GET https://localhost:5001/Test/OnlyJwt HTTP/1.1
+content-type: application/json
+Authorization: Bearer {{access_token}}
+
+###
+
+GET https://localhost:5001/Test/OnlyApiKey HTTP/1.1
+content-type: application/json
+X-Api-Key: {{manager}}
+
+###
+GET https://localhost:5001/Test/OnlyManagers HTTP/1.1
+content-type: application/json
+X-Api-Key: {{manager}}
+
+###
+
+GET https://localhost:5001/Test/OnlyEmployees HTTP/1.1
+content-type: application/json
+X-Api-Key: {{employee}}
+###
+
+GET https://localhost:5001/Test/OnlyThirdParty HTTP/1.1
+content-type: application/json
+X-Api-Key: {{thirdparty}}
